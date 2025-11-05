@@ -180,7 +180,12 @@ code {
 
 .site-content {
   flex: 1;
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-md);
+}
+
+/* Front page specific - reduce top padding */
+.front-page-content {
+  padding-top: var(--space-lg);
 }
 
 .container {
@@ -208,6 +213,12 @@ code {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
   gap: var(--space-md);
 }
 
@@ -438,3 +449,47 @@ code {
 
 .mt-0 { margin-top: 0; }
 .mb-0 { margin-bottom: 0; }
+
+/* ============================================
+   FRONT PAGE — First Impression Excellence
+   ============================================ */
+
+.front-page-content-wrapper {
+  padding: var(--space-xl) 0;
+}
+
+.front-page-content-wrapper h1:first-child {
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  color: var(--color-charcoal);
+}
+
+.front-page-content-wrapper p:first-of-type {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-soft-gray);
+  margin-bottom: var(--space-xl);
+}
+
+/* Add subtle visual interest to the homepage */
+.front-page-article {
+  background: linear-gradient(135deg, var(--color-cream) 0%, rgba(129, 178, 154, 0.05) 100%);
+  border-radius: 8px;
+  padding: var(--space-xl);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Hero image styling if present */
+.front-page-hero {
+  margin: calc(var(--space-xl) * -1) calc(var(--space-xl) * -1) var(--space-xl);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.front-page-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px;
+}
