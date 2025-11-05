@@ -212,7 +212,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-md);
 }
 
@@ -220,6 +220,7 @@ code {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+  flex-shrink: 0;
 }
 
 .site-title {
@@ -399,7 +400,7 @@ code {
    RESPONSIVE — Works Everywhere
    ============================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   :root {
     --text-3xl: 2rem;
     --text-2xl: 1.5rem;
@@ -410,6 +411,7 @@ code {
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .main-navigation ul {
