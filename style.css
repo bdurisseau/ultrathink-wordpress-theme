@@ -4,7 +4,7 @@ Theme URI: https://lotsofhelp.org
 Author: Ultrathink
 Author URI: https://lotsofhelp.org
 Description: A theme that honors the truth: breakthroughs come from networks of support, not single sources. Crafted with obsessive attention to detail, warmth, and accessibility. Every pixel serves the purpose of making it inevitable for people to share their stories of help.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lotsofhelp
@@ -185,7 +185,7 @@ code {
 
 /* Front page specific - reduce top padding */
 .front-page-content {
-  padding-top: var(--space-lg);
+  padding-top: 0;
 }
 
 .container {
@@ -205,15 +205,17 @@ code {
 .site-header {
   background: var(--color-cream);
   border-bottom: 1px solid rgba(26, 26, 26, 0.1);
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-lg) 0;
 }
 
 .site-header .container {
+  max-width: var(--wide-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  gap: var(--space-md);
+  gap: var(--space-xl);
+  padding: 0 var(--space-md);
 }
 
 .site-branding {
@@ -247,14 +249,15 @@ code {
 .main-navigation ul {
   list-style: none;
   display: flex;
-  gap: var(--space-lg);
-  flex-wrap: wrap;
+  gap: var(--space-md);
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .main-navigation a {
   color: var(--color-charcoal);
   font-weight: 500;
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: color var(--transition-fast);
@@ -457,7 +460,7 @@ code {
    ============================================ */
 
 .front-page-content-wrapper {
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0 var(--space-xl);
 }
 
 .front-page-content-wrapper h1:first-child {
