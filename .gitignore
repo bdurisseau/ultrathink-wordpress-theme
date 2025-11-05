@@ -1,0 +1,39 @@
+# WordPress Theme Development
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Editor files
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node (if you add build tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Sass (if you add preprocessing later)
+.sass-cache/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

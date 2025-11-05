@@ -1,0 +1,254 @@
+/**
+ * Additional Styles — Enhancements
+ *
+ * Styles that build upon the foundation in style.css
+ *
+ * @package LotsOfHelp
+ * @since 1.0.0
+ */
+
+/* ============================================
+   Reading Progress Bar
+   ============================================ */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 9999;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-terracotta), var(--color-sage));
+  width: 0%;
+  transition: width 100ms ease-out;
+}
+
+/* ============================================
+   Enhanced Focus States (Keyboard Only)
+   ============================================ */
+
+body:not(.using-keyboard) *:focus {
+  outline: none;
+}
+
+body.using-keyboard *:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ============================================
+   Post Navigation Styling
+   ============================================ */
+
+.post-navigation {
+  margin: var(--space-2xl) 0;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.post-navigation .nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-navigation .nav-next {
+  text-align: right;
+}
+
+.post-navigation .nav-subtitle {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-soft-gray);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.post-navigation .nav-title {
+  font-weight: 600;
+  color: var(--color-charcoal);
+  transition: color var(--transition-fast);
+}
+
+.post-navigation a:hover .nav-title {
+  color: var(--color-terracotta);
+}
+
+/* ============================================
+   Pagination
+   ============================================ */
+
+.pagination {
+  margin: var(--space-2xl) 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  color: var(--color-charcoal);
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+  background: var(--color-terracotta);
+  color: var(--color-cream);
+  border-color: var(--color-terracotta);
+}
+
+/* ============================================
+   Comments
+   ============================================ */
+
+.comments-area {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.comment-author {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.comment-metadata {
+  font-size: var(--text-sm);
+  color: var(--color-soft-gray);
+  margin-bottom: var(--space-sm);
+}
+
+.comment-content {
+  margin-top: var(--space-sm);
+}
+
+.reply {
+  margin-top: var(--space-sm);
+}
+
+.comment-reply-link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   Search Form
+   ============================================ */
+
+.search-form {
+  margin: var(--space-lg) 0;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.search-form label {
+  flex: 1;
+}
+
+.search-form input[type="search"] {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  border-radius: 4px;
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast);
+}
+
+.search-form input[type="search"]:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+}
+
+.search-form input[type="submit"],
+.button {
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-terracotta);
+  color: var(--color-cream);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.search-form input[type="submit"]:hover,
+.button:hover {
+  background: var(--color-sage);
+  color: var(--color-cream);
+}
+
+/* ============================================
+   Widgets
+   ============================================ */
+
+.widget {
+  margin-bottom: var(--space-xl);
+}
+
+.widget-title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget li {
+  margin-bottom: var(--space-sm);
+}
+
+/* ============================================
+   Footer Navigation
+   ============================================ */
+
+.footer-navigation {
+  margin-top: var(--space-md);
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-menu a {
+  font-size: var(--text-sm);
+}
