@@ -8,6 +8,50 @@
  */
 
 /* ============================================
+   Custom Logo Support
+   ============================================ */
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.custom-logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.custom-logo-link:hover {
+  opacity: 0.8;
+}
+
+.custom-logo {
+  height: auto;
+  max-height: 60px;
+  width: auto;
+  display: block;
+}
+
+.site-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .custom-logo {
+    max-height: 50px;
+  }
+
+  .site-branding {
+    gap: var(--space-sm);
+  }
+}
+
+/* ============================================
    Reading Progress Bar
    ============================================ */
 

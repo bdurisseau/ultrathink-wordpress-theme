@@ -27,6 +27,15 @@ function lotsofhelp_setup() {
 	// Enable post thumbnails — every story deserves an image
 	add_theme_support( 'post-thumbnails' );
 
+	// Enable custom logo — your identity, beautifully displayed
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 100,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	) );
+
 	// Register navigation menus — pathways through the site
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'lotsofhelp' ),
