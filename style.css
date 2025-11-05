@@ -4,7 +4,7 @@ Theme URI: https://lotsofhelp.org
 Author: Ultrathink
 Author URI: https://lotsofhelp.org
 Description: A theme that honors the truth: breakthroughs come from networks of support, not single sources. Crafted with obsessive attention to detail, warmth, and accessibility. Every pixel serves the purpose of making it inevitable for people to share their stories of help.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lotsofhelp
@@ -461,6 +461,13 @@ code {
 
 .front-page-content-wrapper {
   padding: var(--space-md) 0 var(--space-xl);
+}
+
+/* Hide the page title on front page - we don't need it */
+.front-page-article .entry-header,
+.front-page-article .entry-title,
+.page .entry-header {
+  display: none;
 }
 
 .front-page-content-wrapper h1:first-child {
