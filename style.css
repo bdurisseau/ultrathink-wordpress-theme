@@ -4,7 +4,7 @@ Theme URI: https://lotsofhelp.org
 Author: Ultrathink
 Author URI: https://lotsofhelp.org
 Description: A theme that honors the truth: breakthroughs come from networks of support, not single sources. Crafted with obsessive attention to detail, warmth, and accessibility. Every pixel serves the purpose of making it inevitable for people to share their stories of help.
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lotsofhelp
@@ -246,12 +246,20 @@ code {
   margin: var(--space-xs) 0 0 0;
 }
 
+.main-navigation {
+  position: relative;
+}
+
 .main-navigation ul {
   list-style: none;
   display: flex;
   gap: var(--space-md);
   flex-wrap: nowrap;
   white-space: nowrap;
+}
+
+.main-navigation li {
+  position: relative;
 }
 
 .main-navigation a {
@@ -261,10 +269,62 @@ code {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: color var(--transition-fast);
+  display: block;
+  padding: var(--space-xs) 0;
 }
 
 .main-navigation a:hover {
   color: var(--color-terracotta);
+}
+
+/* Dropdown / Submenu Styles */
+.main-navigation ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: var(--color-cream);
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: var(--space-xs) 0;
+  margin-top: 0;
+  z-index: 1000;
+  white-space: normal;
+}
+
+.main-navigation li:hover > ul {
+  display: flex;
+}
+
+.main-navigation ul ul li {
+  width: 100%;
+}
+
+.main-navigation ul ul a {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+}
+
+.main-navigation ul ul li:last-child a {
+  border-bottom: none;
+}
+
+.main-navigation ul ul a:hover {
+  background: rgba(224, 122, 95, 0.05);
+  color: var(--color-terracotta);
+}
+
+/* Nested dropdown positioning */
+.main-navigation ul ul ul {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
 }
 
 /* ============================================
@@ -420,6 +480,23 @@ code {
   .main-navigation ul {
     flex-direction: column;
     gap: var(--space-sm);
+  }
+
+  /* Mobile dropdown positioning */
+  .main-navigation ul ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border: none;
+    padding-left: var(--space-md);
+    margin-top: var(--space-xs);
+    background: transparent;
+  }
+
+  .main-navigation ul ul ul {
+    left: 0;
+    margin-left: var(--space-md);
   }
 
   .entry-header {
